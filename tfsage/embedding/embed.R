@@ -24,7 +24,7 @@
 #                  Options: CCAIntegration, HarmonyIntegration,
 #                  JointPCAIntegration, RPCAIntegration, FastMNNIntegration,
 #                  none (skip integration and use PCA embeddings).
-#                  Default: 'CCAIntegration'.
+#                  Default: 'FastMNNIntegration'.
 #
 # Output:
 #   - Parquet files containing the generated embeddings for each specified
@@ -67,9 +67,9 @@ option_list <- list(
   ),
   make_option(c("--method"),
     type = "character",
-    help = "Comma-separated list of embedding generation methods (default: 'CCAIntegration'). Options: CCAIntegration, HarmonyIntegration, JointPCAIntegration, RPCAIntegration, FastMNNIntegration, none.", # nolint: line_length_linter.
+    help = "Comma-separated list of embedding generation methods (default: 'FastMNNIntegration'). Options: CCAIntegration, HarmonyIntegration, JointPCAIntegration, RPCAIntegration, FastMNNIntegration, none.", # nolint: line_length_linter.
     metavar = "methods",
-    default = "CCAIntegration"
+    default = "FastMNNIntegration"
   )
 )
 

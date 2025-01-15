@@ -16,7 +16,7 @@ def run_script_wrapper(
         "RPCAIntegration",
         "FastMNNIntegration",
         "none",
-    ] = "CCAIntegration",
+    ] = "FastMNNIntegration",
 ) -> pd.DataFrame:
     """
     Generate embeddings using the specified method.
@@ -25,7 +25,7 @@ def run_script_wrapper(
         rp_matrix (pd.DataFrame): DataFrame containing the RP matrix.
         metadata (pd.DataFrame): DataFrame containing the metadata.
         align_key (str): Alignment key used to split metadata (default: 'Assay').
-        method (str): Embedding generation method. Options: CCAIntegration, HarmonyIntegration, JointPCAIntegration, RPCAIntegration, FastMNNIntegration, none (default: 'CCAIntegration').
+        method (str): Embedding generation method. Options: CCAIntegration, HarmonyIntegration, JointPCAIntegration, RPCAIntegration, FastMNNIntegration, none (default: 'FastMNNIntegration').
 
     Returns:
         pd.DataFrame: DataFrame containing the generated embeddings.
