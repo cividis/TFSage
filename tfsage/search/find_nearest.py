@@ -1,6 +1,6 @@
 from typing import Callable
 import pandas as pd
-from .generate_scoring_func import generate_scoring_func
+from .create_scoring_func import create_scoring_func
 
 
 def find_nearest(
@@ -22,7 +22,7 @@ def find_nearest(
         pd.DataFrame: DataFrame containing the nearest experiments, their distances, metadata, and computed scores.
     """
     if scoring_func is None:
-        scoring_func = generate_scoring_func(distances=distances)
+        scoring_func = create_scoring_func(distances=distances)
 
     return (
         distances[[experiment_id]]
